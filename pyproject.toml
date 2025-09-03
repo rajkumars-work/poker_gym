@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clubs-gym"
+version = "0.2.0"
+description = "clubs is an open ai gymnasium environment for running arbitrary poker configurations."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "GPL-3.0"}
+authors = [
+    {name = "Ferdinand Schlatt"}
+]
+keywords = ["reinforcement learning", "poker", "AI", "gym"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Games/Entertainment",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    "numpy>=1.16.6",
+    "gymnasium>=0.28.1",
+    "clubs @ git+https://github.com/rajkumars-work/clubs.git",
+]
+
+[project.optional-dependencies]
+render = [
+    "flask>=1.0.0",
+    "flask-socketio==4.3.2",
+    "gevent>=20.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/fschlatt/poker_gym"
+"Bug Reports" = "https://github.com/fschlatt/poker_gym/issues"
+Source = "https://github.com/fschlatt/poker_gym/"
+
+[tool.setuptools.packages.find]
+exclude = ["test", "test.*"]
+
+[tool.setuptools]
+include-package-data = true
