@@ -50,7 +50,7 @@ wheels = [
 [[package]]
 name = "clubs"
 version = "2.0.0"
-source = { git = "https://github.com/rajkumars-work/clubs.git#be9b605f7050596d99e89e9aa998f0ed1c03cae9" }
+source = { git = "https://github.com/rajkumars-work/clubs.git#c2bc2b4418891370583c93cac2c6dad19cccf041" }
 dependencies = [
     { name = "numpy" },
 ]
